@@ -116,6 +116,10 @@ const config: Config = {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.45" },
         },
+        dotPulse: {
+          "0%": { transform: "scale(1)", opacity: "0.55" },
+          "70%, 100%": { transform: "scale(2.6)", opacity: "0" },
+        },
         marquee: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
@@ -124,6 +128,7 @@ const config: Config = {
       animation: {
         "fade-up": "fade-up 0.6s ease-out both",
         "pulse-soft": "pulseSoft 2.4s ease-in-out infinite",
+        "dot-pulse": "dotPulse 2.6s ease-out infinite",
         marquee: "marquee 42s linear infinite",
       },
     },

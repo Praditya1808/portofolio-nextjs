@@ -1,8 +1,24 @@
+"use client";
+
+import { useRef } from "react";
+import { motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
 import { Reveal } from "@/components/motion/Reveal";
 import { experience } from "@/data/site";
 import { cn } from "@/lib/utils";
 
 export function Experience() {
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const reduceMotion = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: timelineRef,
+    offset: ["start 0.8", "end 0.45"],
+  });
+  const lineProgress = useSpring(scrollYProgress, {
+    stiffness: 90,
+    damping: 26,
+    restDelta: 0.001,
+  });
+
   return (
     <section id="pengalaman" className="py-24">
       <div className="container-narrow">
@@ -15,10 +31,25 @@ export function Experience() {
           </p>
         </Reveal>
 
-        <div className="relative ml-4 space-y-12 border-l-2 border-stone-200 sm:ml-8">
+        <div ref={timelineRef} className="relative ml-4 space-y-12 sm:ml-8">
+          <span
+            aria-hidden="true"
+            className="absolute inset-y-0 left-0 w-0.5 rounded-full bg-stone-200"
+          />
+          <motion.span
+            aria-hidden="true"
+            className="absolute inset-y-0 left-0 w-0.5 origin-top rounded-full bg-gradient-to-b from-terracotta via-amber-400 to-forest/60"
+            style={{ scaleY: reduceMotion ? 1 : lineProgress }}
+          />
           {experience.map((item, index) => (
             <Reveal key={`${item.title}-${item.period}`} delay={index * 0.04}>
               <article className="group relative pl-7 sm:pl-10">
+                {item.highlighted ? (
+                  <span
+                    aria-hidden="true"
+                    className="absolute -left-[9px] top-1.5 h-4 w-4 animate-dot-pulse rounded-full bg-terracotta/40"
+                  />
+                ) : null}
                 <span
                   className={cn(
                     "absolute -left-[9px] top-1.5 h-4 w-4 rounded-full border-4 border-paper transition-transform group-hover:scale-125",
@@ -50,11 +81,32 @@ export function Experience() {
                 </p>
 
                 {item.bullets?.length ? (
-                  <ul className="ml-4 mt-4 list-outside list-disc space-y-2.5 text-xs leading-relaxed text-stone-600 sm:text-sm">
+                  <motion.ul
+                    className="ml-4 mt-4 list-outside list-disc space-y-2.5 text-xs leading-relaxed text-stone-600 sm:text-sm"
+                    initial={reduceMotion ? false : "hidden"}
+                    whileInView="show"
+                    viewport={{ once: true, margin: "-40px" }}
+                    variants={{
+                      hidden: {},
+                      show: { transition: { staggerChildren: 0.045 } },
+                    }}
+                  >
                     {item.bullets.map((bullet) => (
-                      <li key={bullet}>{bullet}</li>
+                      <motion.li
+                        key={bullet}
+                        variants={{
+                          hidden: { opacity: 0, x: -6 },
+                          show: {
+                            opacity: 1,
+                            x: 0,
+                            transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] },
+                          },
+                        }}
+                      >
+                        {bullet}
+                      </motion.li>
                     ))}
-                  </ul>
+                  </motion.ul>
                 ) : null}
 
                 {item.paragraph ? (
