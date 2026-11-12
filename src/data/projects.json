@@ -1,0 +1,124 @@
+[
+  {
+    "id": 1,
+    "title": "Romansa Opium",
+    "publisher": "Akad Media Cakrawala",
+    "year": "2025",
+    "role": "Editor, Layouter, & Project Coordinator",
+    "badge": "🔥 ~2.000 Pre-Orders Hit",
+    "category": "historical-fiction",
+    "categoryLabel": "Historical Fiction",
+    "coverBg": "from-rose-950 via-stone-900 to-amber-950",
+    "coverAccent": "text-rose-300",
+    "coverPattern": "🥀",
+    "images": ["/images/books/romansa-opium-1.jpg"],
+    "synopsis": "Johanne Van der Meer telah berjanji pada dirinya sendiri untuk bersiap diri menanggung dosa demi kekuasaan yang telah terjanjikan. Namun siapa sangka, dalam perjalanan yang penuh dengan warna hitam, ia justru bertemu sosok Jayantaka yang sehangat dan secerah matahari pagi. Dalam pergulatan jiwa, Johanne harus memutuskan sebuah pilihan yang akan mengubah sisi pandang hidupnya. Di manakah hati Johanne akan berlabuh? Kekuasaan atau sebuah kehangatan?",
+    "highlights": [
+      "Koordinasi dan memastikan proses editorial serta produksi selesai sesuai timeline.",
+      "Koordinasi untuk kebutuhan brief tim desain dan kebutuhan konten tim promosi.",
+      "Koordinasi dengan penulis mengenai naskah, keinginan penulis, serta kebutuhan penerbit.",
+      "Menyunting konten dan tanda baca (editing) pada naskah.",
+      "Melakukan tata letak (layouting) naskah menggunakan Adobe Indesign."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Cross The Line",
+    "publisher": "Akad Media Cakrawala",
+    "year": "2026",
+    "role": "Development Editor, Layouter, Project Coordinator, & Visual Direction",
+    "badge": "⭐ Best Seller Pre-Order",
+    "category": "metropop",
+    "categoryLabel": "Metropop",
+    "coverBg": "from-slate-900 via-indigo-950 to-stone-900",
+    "coverAccent": "text-cyan-300",
+    "coverPattern": "⚡",
+    "images": ["/images/books/cross-the-line-1.jpg"],
+    "synopsis": "Berawal dari salah mengirim pesan, Gia Kahlani—seorang auditor dari Kantor Akuntan Publik (KAP) Tanuredja & Partners, budak korporat yang ingin menjalani kehidupan kantor tanpa banyak drama, mendadak harus berurusan dengan Reno, presdir dari perusahaan yang merekrutnya. Mereka menjadi dekat lewat kebetulan-kebetulan kecil. Sering bertemu karena urusan pekerjaan, membuat keduanya perlahan menemukan kenyamanan pada satu sama lain. Sayangnya, ada batas profesionalitas yang tidak boleh mereka lewati. Auditor dan kliennya dilarang memiliki hubungan pribadi demi tidak memengaruhi opini dalam laporan audit. Kemudian ke manakah mereka akan membawa pergi perasan yang tumbuh tanpa terkendali?",
+    "highlights": [
+      "Koordinasi dan memastikan proses editorial serta produksi selesai sesuai timeline.",
+      "Koordinasi untuk kebutuhan brief tim desain dan kebutuhan konten tim promosi.",
+      "Koordinasi dengan penulis mengenai naskah, keinginan penulis, serta kebutuhan penerbit.",
+      "Menyunting dan mengembangkan naskah secara mendalam dan menyeluruh.",
+      "Melakukan tata letak (layouting) naskah menggunakan Adobe Indesign."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "5 Langkah",
+    "publisher": "Akad Media Cakrawala",
+    "year": "2026",
+    "role": "Editor, Project Coordinator, & Layouter",
+    "badge": "✨ Ribuan Pembaca",
+    "category": "friendship-family",
+    "categoryLabel": "Friendship & Family",
+    "coverBg": "from-amber-900 via-stone-900 to-amber-950",
+    "coverAccent": "text-amber-200",
+    "coverPattern": "👣",
+    "images": ["/images/books/5-langkah-3.jpg"],
+    "synopsis": "Keenan, Sean, dan Sasa adalah tiga sahabat yang tumbuh bersama sejak kecil dan percaya bahwa persahabatan mereka akan selalu berjalan sama. Namun, ketika memasuki masa remaja, berbagai konflik seperti cinta pertama, serta impian yang membawa mereka ke jalan berbeda, perlahan menguji ikatan tersebut. Melalui setiap pertengkaran, kehilangan, dan proses bertumbuh, mereka belajar bahwa menjadi dewasa bukan berarti berhenti berjalan bersama. Karena kehidupan dewasa mengajarkan untuk selalu mengambil langkah kembali kepada orang-orang yang mereka anggap rumah. Sama seperti Keenan, Sasa, dan Sean yang selalu berusaha menemukan jalan untuk kembali pada satu sama lain. Cause home isn't always a place. Sometimes, it's people.",
+    "highlights": [
+      "Koordinasi dan memastikan proses editorial serta produksi selesai sesuai timeline.",
+      "Koordinasi untuk kebutuhan brief tim desain dan kebutuhan konten tim promosi.",
+      "Koordinasi dengan penulis mengenai naskah, keinginan penulis, serta kebutuhan penerbit.",
+      "Menyunting dan mengembangkan naskah secara mendalam dan menyeluruh.",
+      "Melakukan tata letak (layouting) naskah menggunakan Adobe Indesign."
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Silver Lining",
+    "publisher": "Akad Media Cakrawala",
+    "year": "2026",
+    "role": "Ghostwriter, Project Coordinator, & Layouter",
+    "badge": "Novel Komik • Vol. 1",
+    "category": "novel-komik",
+    "categoryLabel": "Novel Komik",
+    "wideGallery": true,
+    "coverBg": "from-sky-950 via-slate-900 to-teal-950",
+    "coverAccent": "text-sky-200",
+    "coverPattern": "☂️",
+    "images": ["/images/books/silver-lining-1.jpg"],
+    "manuscript": {
+      "sampleUrl": "https://drive.google.com/file/d/17sXg9zONh934nxNRc_hZ3LGhib8GRVyj/view?usp=sharing",
+      "sampleLabel": "Baca Sampel",
+      "accessNote": "Sampel publik • naskah penuh view-only dan akses terbatas."
+    },
+    "synopsis": "“Every cloud has a silver lining”\n“Setiap kesulitan, pasti terdapat kebaikan yang mengikutinya”\n\nPerkataan tersebut selalu tertanam dalam hati gadis bisu polos bermata violet itu. Bahwa segala macam hal buruk yang terjadi pada dirinya akan segera berlalu dan kehidupannya akan membaik kelak.\n\nBersabarlah dan teruslah kuat... katanya. Tapi, hanya dengan berbekalkan tekad itu saja, apakah cukup?\n\nGaby Athalia Chandramaya, gadis remaja berusia 16 tahun itu terpaksa menjadi ‘pembantu’ di rumah mantan sahabatnya—Samantha Auristela Chandrawarma, yang kini menjadi perundungnya. Ia hanya bisa berusaha bertahan menghadapi rundungan itu selama beberapa tahun, pasrah karena suatu hutang budi.\n\nSampai suatu hari, akhirnya, Gaby runtuh. Ia putus asa dan hampir menyerah.\n\nSaat itu, tiba-tiba ia dipertemukan dengan seorang laki-laki yang muncul dan menolongnya, Vicky Giovano Narawikara. Kilauan rambut dari laki-laki galak itu bagaikan perak yang terpantul matahari. Entah takdir atau hanya kebetulan, tapi pertemuan mereka saat itu, perlahan mengubah kehidupan Gaby. Vicky memperkenalkannya pada keberanian bersuara... pada pertemanan yang ia rindukan... dan juga... pada cinta?",
+    "highlights": [
+      "Koordinasi dan memastikan proses editorial serta produksi selesai sesuai timeline.",
+      "Koordinasi untuk kebutuhan brief tim desain dan kebutuhan konten tim promosi.",
+      "Koordinasi dengan penulis mengenai naskah, keinginan penulis, serta kebutuhan penerbit.",
+      "Menulis naskah (ghostwriting) berdasarkan konsep dan outline yang tersedia di platform Webtoon yang telah disepakati oleh penerbit.",
+      "Melakukan tata letak (layouting) naskah menggunakan Adobe Indesign."
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Through The Flower Shop Window",
+    "publisher": "Akad Media Cakrawala",
+    "year": "2026",
+    "role": "Proofreader, Layouter, & Project Coordinator",
+    "badge": "🔥 ~2.000 Pre-Orders Hit",
+    "category": "slice-of-life",
+    "categoryLabel": "Slice of Life",
+    "wideGallery": true,
+    "coverBg": "from-sky-950 via-slate-900 to-teal-950",
+    "coverAccent": "text-sky-200",
+    "coverPattern": "☂️",
+    "images": ["/images/books/Lotus.jpeg"],
+    "manuscript": {
+      "sampleUrl": "https://drive.google.com/file/d/1h9MgeQrxS3LS0d8Zu78j6GfJFyBxG7s1/view",
+      "sampleLabel": "Baca Sampel",
+      "accessNote": "Sampel publik • naskah penuh view-only dan akses terbatas."
+    },
+    "synopsis": "Toko bunga Fairy Blossom tidak pernah sepi. Khususnya di hari Sabtu dan Minggu. Setiap akhir pekan, Ocean dan Audine beserta putri mereka, Anira, akan menghabiskan waktu untuk toko bunganya dan menjalankan kehidupan selayaknya ‘manusia biasa’—melayani pelanggan, sekaligus melepas gelar populer yang mereka miliki sebagai keluarga public figure. Belasan tahun sudah terlewati sejak mereka menikah, kini Ocean dan Audine kembali membagikan potongan kehidupannya bukan lagi hanya sebagai pasangan, namun juga sebagai orang tua. Mempertontonkan lagi kasih sayang serta dialog manis bagi ia yang merindu. Dan dari jendela toko bunga, mereka juga melihat lebih dari sekadar kelopak-kelopak yang mekar. Ada pengakuan, harapan, hingga penyesalan di setiap ikatan buket. Cerita kecil dari para pelanggan, sampai permintaan aneh, yang, siapa menyangka malah menjadikan mereka pemandu untuk menyelamatkan banyak hal?",
+    "highlights": [
+      "Koordinasi dan memastikan proses editorial serta produksi selesai sesuai timeline.",
+      "Koordinasi untuk kebutuhan brief tim desain dan kebutuhan konten tim promosi.",
+      "Koordinasi dengan penulis mengenai naskah, keinginan penulis, serta kebutuhan penerbit.",
+      "Memeriksa tanda baca secara teliti (proofreading) pada naskah.",
+      "Melakukan tata letak (layouting) naskah menggunakan Adobe Indesign."
+    ]
+  }
+]
