@@ -16,7 +16,8 @@ export type AuthorGalleryPhoto = {
  * 2. Tambahkan entri baru di bawah dengan `src` mengarah ke file tersebut.
  * 3. Isi `caption`, dan opsional `author` / `book`.
  *
- * Jumlah foto tidak dibatasi — grid dan lightbox otomatis mengikuti panjang array.
+ * Jumlah foto tidak dibatasi, tetapi galeri hanya menampilkan maksimal 8 foto
+ * dalam dua baris (4 + 4 atau 4 + 3) agar komposisinya tetap rapi.
  * Entri `foto-1.jpg` s.d. `foto-6.jpg` saat ini adalah placeholder dan bisa diganti.
  */
 export const authorGallery: AuthorGalleryPhoto[] = [
