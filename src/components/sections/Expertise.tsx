@@ -26,7 +26,7 @@ export function Expertise() {
               aria-hidden="true"
               className="h-3.5 w-3.5 fill-amber-300 text-amber-500"
             />
-            Keahlian unggulan
+            Expertise
           </p>
         </Reveal>
 
@@ -82,7 +82,7 @@ export function Expertise() {
                             <span>
                               {item}
                               {isTopSkill ? (
-                                <span className="sr-only"> — keahlian unggulan</span>
+                                <span className="sr-only"> — Expertise</span>
                               ) : null}
                             </span>
                           </li>
