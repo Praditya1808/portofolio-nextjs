@@ -69,7 +69,7 @@ export const profilePhotos = [
 export const skillPillars: SkillPillar[] = [
   {
     icon: "editorial",
-    title: "Editorial & Content",
+    title: "Content Editorial",
     description:
       "Penyuntingan naskah secara komprehensif mulai dari struktur cerita hingga tanda baca terkecil.",
     items: [
@@ -84,7 +84,7 @@ export const skillPillars: SkillPillar[] = [
   },
   {
     icon: "publishing",
-    title: "Publishing & Production",
+    title: "Product Management",
     description:
       "Pengembangan produk buku dari tahap negosiasi naskah hingga siap masuk mesin percetakan.",
     items: [
@@ -99,7 +99,7 @@ export const skillPillars: SkillPillar[] = [
   },
   {
     icon: "project",
-    title: "Project & Stakeholder",
+    title: "Project Management",
     description:
       "Manajemen alur kerja terstruktur untuk memastikan tenggat waktu dan kualitas buku tetap terjaga.",
     items: [
@@ -112,7 +112,7 @@ export const skillPillars: SkillPillar[] = [
   },
   {
     icon: "tools",
-    title: "Tools & Perangkat",
+    title: "Tools",
     description:
       "Penguasaan aplikasi industri untuk tata letak dokumen naskah, desain visual, dan kolaborasi kerja.",
     items: [

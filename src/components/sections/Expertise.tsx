@@ -1,12 +1,13 @@
-import { BookOpen, Check, Cpu, PenLine, Users, type LucideIcon } from "lucide-react";
+import Image from "next/image";
+import { Check } from "lucide-react";
 import { Reveal } from "@/components/motion/Reveal";
 import { skillPillars, type SkillPillar } from "@/data/site";
 
-const iconMap: Record<SkillPillar["icon"], LucideIcon> = {
-  editorial: PenLine,
-  publishing: BookOpen,
-  project: Users,
-  tools: Cpu,
+const iconMap: Record<SkillPillar["icon"], { src: string; alt: string }> = {
+  editorial: { src: "/assets/edit.png", alt: "Ikon editing" },
+  publishing: { src: "/assets/book.png", alt: "Ikon publishing" },
+  project: { src: "/assets/closure.png", alt: "Ikon project" },
+  tools: { src: "/assets/pen-tool.png", alt: "Ikon tools" },
 };
 
 export function Expertise() {
@@ -23,13 +24,19 @@ export function Expertise() {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 xl:gap-8">
           {skillPillars.map((pillar, index) => {
-            const Icon = iconMap[pillar.icon];
+            const icon = iconMap[pillar.icon];
             return (
               <Reveal key={pillar.title} delay={index * 0.06}>
                 <article className="flex h-full flex-col justify-between rounded-2xl border border-stone-200/90 bg-white p-7 shadow-sm transition-all hover:border-terracotta/40 hover:shadow-md">
                   <div>
                     <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-50 text-terracotta">
-                      <Icon className="h-6 w-6" />
+                      <Image
+                        src={icon.src}
+                        alt={icon.alt}
+                        width={28}
+                        height={28}
+                        className="h-7 w-7 object-contain"
+                      />
                     </div>
                     <h3 className="mb-2 font-serif text-xl font-bold text-stone-900">
                       {pillar.title}
