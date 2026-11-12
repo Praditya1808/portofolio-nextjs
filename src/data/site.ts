@@ -7,6 +7,8 @@ export type SkillPillar = {
   title: string;
   description: string;
   items: string[];
+  /** Daftar skill paling unggul; ditandai bintang di kartu keahlian. */
+  topSkills?: string[];
   footer: string;
 };
 
@@ -82,6 +84,7 @@ export const skillPillars: SkillPillar[] = [
       "Final Quality Control",
       "Feature & News Writing",
     ],
+    topSkills: ["Copy Editing", "Developmental Editing"],
     footer: "Standar KBBI & EYD",
   },
   {
@@ -101,6 +104,7 @@ export const skillPillars: SkillPillar[] = [
       "Koordinasi dengan tim editor eksternal & tim lainnya yang terlibat.",
       "Monitoring Penjualan & Pra-Pesan",
     ],
+    topSkills: ["Editorial Timelines & Workflow"],
     footer: "End-to-End Book Publishing • Kapasitas 20–24 Buku / Tahun",
   },
   {
@@ -115,6 +119,7 @@ export const skillPillars: SkillPillar[] = [
       "Canva (Visual Design & Briefs)",
       "CapCut (Promotional Video)",
     ],
+    topSkills: ["Adobe InDesign"],
     footer: "Workflow Digital & Cetak",
   },
 ];
