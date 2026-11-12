@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 import { useReducedMotion } from "framer-motion";
 import { profilePhotos, site } from "@/data/site";
 import { cn } from "@/lib/utils";
@@ -59,7 +59,7 @@ export function PhotoCarousel() {
       role="region"
       aria-roledescription="carousel"
       aria-label="Foto profil El Syifa Thea Salsabila"
-      className="relative aspect-[4/5] w-full cursor-grab touch-pan-y select-none overflow-hidden rounded-2xl bg-stone-200 shadow-inner active:cursor-grabbing"
+      className="relative aspect-[4/5] w-full cursor-grab touch-pan-y select-none overflow-hidden rounded-[1.35rem] bg-stone-200 shadow-inner ring-1 ring-white/60 active:cursor-grabbing"
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerUp={finishDrag}
@@ -89,18 +89,25 @@ export function PhotoCarousel() {
               className="object-cover object-top"
               priority={photoIndex === 0}
             />
-            <span className="absolute left-4 top-4 z-20 rounded-full border border-white/20 bg-stone-950/75 px-2.5 py-0.5 text-[10px] font-bold text-amber-300 backdrop-blur-md">
-              Foto {photoIndex + 1}
+            <span className="absolute left-3.5 top-3.5 z-20 inline-flex items-center gap-1.5 rounded-full border border-white/60 bg-white/85 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-terracotta shadow-sm backdrop-blur-md">
+              <span className="h-1.5 w-1.5 rounded-full bg-forest" />
+              Potret {photoIndex + 1}
             </span>
           </div>
         ))}
       </div>
 
+      {/* Garis bingkai tipis di dalam foto */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-2.5 z-10 rounded-[1.1rem] border border-white/30"
+      />
+
       <button
         type="button"
         aria-label="Foto sebelumnya"
         onClick={() => goTo(index - 1)}
-        className="absolute left-3 top-1/2 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-stone-950/80 text-white shadow-lg transition-colors hover:bg-terracotta"
+        className="absolute left-3 top-1/2 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-white/85 text-terracotta shadow-lg backdrop-blur-md transition-all hover:-translate-x-0.5 hover:bg-white hover:text-terracotta-dark"
       >
         <ChevronLeft className="h-5 w-5" />
       </button>
@@ -109,12 +116,12 @@ export function PhotoCarousel() {
         type="button"
         aria-label="Foto selanjutnya"
         onClick={() => goTo(index + 1)}
-        className="absolute right-3 top-1/2 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-terracotta/90 text-white shadow-lg transition-colors hover:bg-terracotta-dark"
+        className="absolute right-3 top-1/2 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-white/85 text-terracotta shadow-lg backdrop-blur-md transition-all hover:translate-x-0.5 hover:bg-white hover:text-terracotta-dark"
       >
         <ChevronRight className="h-5 w-5" />
       </button>
 
-      <div className="absolute right-4 top-4 z-30 flex items-center gap-2 rounded-full border border-white/20 bg-stone-950/70 px-2.5 py-1.5 backdrop-blur-md">
+      <div className="absolute right-3.5 top-3.5 z-30 flex items-center gap-2 rounded-full border border-white/60 bg-white/85 px-2.5 py-1.5 shadow-sm backdrop-blur-md">
         <div className="flex items-center gap-1" aria-label="Pilih foto profil">
           {profilePhotos.map((photo, photoIndex) => (
             <button
@@ -128,23 +135,29 @@ export function PhotoCarousel() {
               <span
                 className={cn(
                   "block h-2 rounded-full transition-all duration-300",
-                  photoIndex === index ? "w-5 bg-amber-300" : "w-2 bg-white/40",
+                  photoIndex === index ? "w-5 bg-terracotta" : "w-2 bg-terracotta/25",
                 )}
               />
             </button>
           ))}
         </div>
-        <span className="pl-1.5 font-mono text-[11px] font-semibold text-amber-300">
+        <span className="pl-1.5 font-mono text-[11px] font-semibold text-terracotta">
           {index + 1}/{total}
         </span>
       </div>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex flex-col justify-end bg-gradient-to-t from-stone-950/90 via-stone-950/25 to-transparent p-5 text-white">
-        <span className="text-[10px] font-semibold uppercase tracking-wider text-amber-300">
-          {site.role}
-        </span>
-        <p className="font-serif text-2xl font-bold leading-tight">{site.name}</p>
-        <p className="mt-0.5 text-xs text-stone-300">{site.location}</p>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex flex-col justify-end bg-gradient-to-t from-[#2D1812]/95 via-[#40251D]/45 to-transparent p-5 pt-16 text-paper">
+        <div className="mb-1.5 flex items-center gap-2">
+          <span aria-hidden="true" className="h-px w-6 bg-amber-300/90" />
+          <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-amber-300">
+            {site.role}
+          </span>
+        </div>
+        <p className="font-serif text-[1.6rem] font-bold leading-tight">{site.name}</p>
+        <p className="mt-1 flex items-center gap-1.5 text-xs text-stone-300">
+          <MapPin className="h-3 w-3 text-amber-300" />
+          {site.location}
+        </p>
       </div>
     </div>
   );

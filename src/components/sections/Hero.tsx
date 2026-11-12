@@ -1,9 +1,13 @@
-import { ArrowDown, Download, MapPin } from "lucide-react";
+import { ArrowDown, Download } from "lucide-react";
 import { Reveal } from "@/components/motion/Reveal";
 import { PhotoCarousel } from "@/components/sections/PhotoCarousel";
 import { site } from "@/data/site"; 
 
 export function Hero() {
+  const nameParts = site.name.trim().split(/\s+/);
+  const highlightName = nameParts.slice(0, Math.min(2, nameParts.length)).join(" ");
+  const restName = nameParts.slice(2).join(" ");
+
   return (
     <section
       id="profil"
@@ -20,9 +24,32 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={0.05} className="space-y-3">
-              <p className="font-serif text-2xl italic text-stone-500">Halo, perkenalkan saya</p>
+              <div className="flex items-center gap-3">
+                <span
+                  aria-hidden="true"
+                  className="h-px w-9 bg-gradient-to-r from-terracotta/60 to-transparent sm:w-12"
+                />
+                <p className="font-serif text-3xl italic text-stone-500 sm:text-4xl">Hi, I&apos;m</p>
+              </div>
               <h1 className="font-serif text-4xl font-bold leading-[1.12] tracking-tight text-stone-900 sm:text-5xl lg:text-[3.5rem] xl:text-[4rem]">
-                {site.name}
+                <span className="relative inline-block whitespace-nowrap text-forest">
+                  <em className="italic">{highlightName}</em>
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 220 12"
+                    preserveAspectRatio="none"
+                    className="absolute -bottom-1.5 left-0 h-2.5 w-full text-amber-500/80 sm:-bottom-2 sm:h-3"
+                  >
+                    <path
+                      d="M2 8.5C40 3.5 90 2.5 140 5c30 1.5 55 2.5 78 1"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
+                {restName ? <>{" "}{restName}</> : null}
               </h1>
             </Reveal>
 
@@ -76,22 +103,30 @@ export function Hero() {
           </div>
 
           <Reveal delay={0.15} className="flex justify-center lg:col-span-5 lg:justify-end">
-            <div className="relative w-full max-w-[420px]">
-              <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-tr from-amber-200/50 via-rose-100/30 to-amber-100/40 blur-2xl" />
+            <div className="relative isolate w-full max-w-[420px]">
+              <div className="absolute -inset-6 -z-10 rounded-[3rem] bg-gradient-to-tr from-amber-200/60 via-rose-100/40 to-emerald-200/50 blur-3xl" />
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 -z-10 translate-x-3 translate-y-4 rounded-[2.1rem] bg-amber-100/80 ring-1 ring-amber-300/60"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 -z-10 -translate-x-2.5 -translate-y-2.5 rounded-[2.1rem] border border-emerald-300/60"
+              />
 
-              <div className="space-y-4 rounded-3xl border border-stone-200/90 bg-white p-4 shadow-2xl sm:p-5">
+              <div className="relative rounded-[2rem] border border-white/70 bg-white/90 p-3 shadow-[0_36px_70px_-30px_rgba(81,50,41,0.5)] backdrop-blur-sm sm:p-3.5">
                 <PhotoCarousel />
 
-                <div className="space-y-2 rounded-xl border border-stone-200/80 bg-stone-50 p-3.5">
-                  <p className="text-center font-serif text-xs italic leading-relaxed text-stone-700 sm:text-sm">
+                <div className="relative mt-3 space-y-2 overflow-hidden rounded-2xl border border-amber-200/60 bg-gradient-to-br from-amber-50/80 via-stone-50 to-emerald-50/50 p-4">
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -left-1 -top-3 font-serif text-6xl leading-none text-amber-400/25"
+                  >
+                    &ldquo;
+                  </span>
+                  <p className="relative text-center font-serif text-sm italic leading-relaxed text-stone-700 sm:text-[15px]">
                     &ldquo;{site.quote}&rdquo;
                   </p>
-                  <div className="flex items-center justify-center gap-3 border-t border-stone-200 pt-2 text-xs font-medium text-stone-500">
-                    <span className="flex items-center gap-1.5">
-                      <MapPin className="h-3.5 w-3.5 text-terracotta" />
-                      Depok, Jawa Barat
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>

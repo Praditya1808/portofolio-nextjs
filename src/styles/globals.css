@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --paper-bg: #faf8f5;
+  --paper-bg: #f4f1e2;
   --paper-card: #ffffff;
-  --ink-primary: #1c1917;
-  --ink-muted: #57534e;
-  --terracotta: #a34e2e;
-  --terracotta-dark: #964223;
-  --antique-gold: #c5a059;
-  --forest-ink: #273831;
+  --ink-primary: #513229;
+  --ink-muted: #5e3b2f;
+  --terracotta: #513229;
+  --terracotta-dark: #40251d;
+  --antique-gold: #fce6b7;
+  --forest-ink: #7f8157;
 }
 
 @layer base {
@@ -25,7 +25,7 @@
 
   ::selection {
     background-color: var(--terracotta);
-    color: #fff;
+    color: #f4f1e2;
   }
 
   section[id] {
@@ -102,10 +102,10 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f4efe6;
+  background: #f4f1e2;
 }
 ::-webkit-scrollbar-thumb {
-  background: #d8cebf;
+  background: #d7d4b1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {

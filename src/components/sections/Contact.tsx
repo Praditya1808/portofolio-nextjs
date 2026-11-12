@@ -11,9 +11,9 @@ const glyphMap: Record<ContactItem["icon"], ContactGlyphName> = {
 };
 
 const accentMap: Record<ContactItem["accent"], { icon: string; cta: string }> = {
-  emerald: { icon: "bg-emerald-50 text-emerald-600", cta: "text-emerald-700" },
+  emerald: { icon: "bg-whatsapp-light text-whatsapp-dark", cta: "text-whatsapp-dark" },
   terracotta: { icon: "bg-amber-50 text-terracotta", cta: "text-terracotta" },
-  blue: { icon: "bg-blue-50 text-blue-600", cta: "text-blue-600" },
+  blue: { icon: "bg-linkedin-light text-linkedin", cta: "text-linkedin" },
   stone: { icon: "bg-stone-100 text-stone-600", cta: "text-stone-500" },
 };
 

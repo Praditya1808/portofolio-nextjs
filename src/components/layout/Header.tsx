@@ -77,7 +77,7 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 border-b border-stone-200/80 bg-[#FAF8F5]/95 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-stone-200/80 bg-[#F4F1E2]/95 backdrop-blur-md">
       <div className="container-site flex h-20 items-center justify-between gap-6">
         <a href="#profil" className="group flex shrink-0 items-center gap-3.5">
           <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-stone-900 font-serif text-lg font-bold text-amber-200 shadow-sm transition-colors group-hover:bg-terracotta group-hover:text-white">

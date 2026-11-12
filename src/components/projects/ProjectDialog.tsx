@@ -104,7 +104,7 @@ export function ProjectDialog({ project, onClose }: ProjectDialogProps) {
               <h3 className="mb-1 text-[11px] font-bold uppercase tracking-wider text-stone-500">
                 Blurb:
               </h3>
-              <p className="whitespace-pre-line rounded-lg border-l-4 border-terracotta bg-[#FAF7F2] p-3 text-sm italic leading-relaxed text-stone-700">
+              <p className="whitespace-pre-line rounded-lg border-l-4 border-terracotta bg-stone-50 p-3 text-sm italic leading-relaxed text-stone-700">
                 {project.synopsis}
               </p>
             </div>
