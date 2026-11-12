@@ -122,7 +122,7 @@ export function Header() {
             <FileText className="h-4 w-4 text-terracotta" />
             <span>Curriculum Vitae</span>
           </a> */}
-          {/* <a
+          <a
             href={site.phoneHref}
             target="_blank"
             rel="noopener noreferrer"
@@ -130,7 +130,7 @@ export function Header() {
           >
             <MessageCircle className="h-4 w-4" />
             <span>Hubungi Saya</span>
-          </a> */}
+          </a>
         </div>
 
         <button
