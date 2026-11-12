@@ -32,10 +32,15 @@ const config: Config = {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.45" },
         },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.6s ease-out both",
         "pulse-soft": "pulseSoft 2.4s ease-in-out infinite",
+        marquee: "marquee 42s linear infinite",
       },
     },
   },

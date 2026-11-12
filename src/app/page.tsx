@@ -6,6 +6,7 @@ import { Editorial } from "@/components/sections/Editorial";
 import { Education } from "@/components/sections/Education";
 import { Experience } from "@/components/sections/Experience";
 import { Expertise } from "@/components/sections/Expertise";
+import { Gallery } from "@/components/sections/Gallery";
 import { Hero } from "@/components/sections/Hero";
 import { Projects } from "@/components/sections/Projects";
 
@@ -20,6 +21,7 @@ export default function HomePage() {
         <Projects />
         <Editorial />
         <Education />
+        <Gallery />
         <Contact />
       </main>
       <Footer />

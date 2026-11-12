@@ -50,6 +50,7 @@ export const navItems: NavItem[] = [
   { label: "Karya Buku", href: "#karya" },
   { label: "Sentuhan Editor", href: "#sentuhan-editor" },
   { label: "Edukasi", href: "#edukasi" },
+  { label: "Galeri", href: "#galeri" },
   { label: "Kontak", href: "#kontak" },
 ];
 
