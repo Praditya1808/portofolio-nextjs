@@ -85,9 +85,9 @@ export const skillPillars: SkillPillar[] = [
   },
   {
     icon: "publishing",
-    title: "Product Management",
+    title: "Product & Project Management",
     description:
-      "Pengembangan produk buku dari tahap negosiasi naskah hingga siap masuk mesin percetakan.",
+      "Pengembangan produk buku dari tahap negosiasi naskah hingga siap masuk mesin percetakan, dengan manajemen alur kerja terstruktur agar tenggat waktu dan kualitas buku tetap terjaga.",
     items: [
       "Author Pitching & Sourcing",
       "Negosiasi & Proposal Naskah",
@@ -95,21 +95,12 @@ export const skillPillars: SkillPillar[] = [
       "Konsep Produk & Kemasan",
       "Visual Direction (Cover & Art)",
       "Koordinasi Cetak (Print Ops)",
-    ],
-    footer: "End-to-End Book Publishing",
-  },
-  {
-    icon: "project",
-    title: "Project Management",
-    description:
-      "Manajemen alur kerja terstruktur untuk memastikan tenggat waktu dan kualitas buku tetap terjaga.",
-    items: [
       "Editorial Timelines & Workflow",
       "Author relations management",
       "Koordinasi dengan tim editor eksternal & tim lainnya yang terlibat.",
       "Monitoring Penjualan & Pra-Pesan",
     ],
-    footer: "Kapasitas 20–24 Buku / Tahun",
+    footer: "End-to-End Book Publishing • Kapasitas 20–24 Buku / Tahun",
   },
   {
     icon: "tools",
