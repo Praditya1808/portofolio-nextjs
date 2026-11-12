@@ -53,12 +53,13 @@ export const navItems: NavItem[] = [
   { label: "Kontak", href: "#kontak" },
 ];
 
-export const heroStats: Stat[] = [
-  { value: "~2.000", label: "Pre-Orders Buku Komersial" },
-  { value: "20–24", label: "Buku / Tahun (1–2 / bulan)" },
-  { value: "3.81", suffix: "/4.00", label: "IPK Sastra Indonesia UM" },
-  { value: "7 Sem.", label: "Lulus Sarjana Tercepat" },
-];
+// disabled for now, will be re-enabled in the future
+// export const heroStats: Stat[] = [
+//   { value: "~2.000", label: "Pre-Orders Buku Komersial" },
+//   { value: "20–24", label: "Buku / Tahun (1–2 / bulan)" },
+//   { value: "3.81", suffix: "/4.00", label: "IPK Sastra Indonesia UM" },
+//   { value: "7 Sem.", label: "Lulus Sarjana Tercepat" },
+// ];
 
 export const profilePhotos = [
   { src: "/images/el-syifa.jpg", alt: "El Syifa Thea Salsabila — foto profil 1" },

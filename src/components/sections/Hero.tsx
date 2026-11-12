@@ -1,7 +1,7 @@
 import { ArrowDown, Download, MapPin } from "lucide-react";
 import { Reveal } from "@/components/motion/Reveal";
 import { PhotoCarousel } from "@/components/sections/PhotoCarousel";
-import { heroStats, site } from "@/data/site";
+import { site } from "@/data/site"; 
 
 export function Hero() {
   return (
@@ -58,7 +58,7 @@ export function Hero() {
               </div>
             </Reveal>
 
-            <Reveal delay={0.2}>
+            {/* <Reveal delay={0.2}>
               <dl className="grid grid-cols-2 gap-6 border-t border-stone-200 pt-8 sm:grid-cols-4">
                 {heroStats.map((stat) => (
                   <div key={stat.label} className="border-l-2 border-amber-600/40 pl-4">
@@ -72,7 +72,7 @@ export function Hero() {
                   </div>
                 ))}
               </dl>
-            </Reveal>
+            </Reveal> */}
           </div>
 
           <Reveal delay={0.15} className="flex justify-center lg:col-span-5 lg:justify-end">

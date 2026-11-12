@@ -113,7 +113,7 @@ export function Header() {
         </nav>
 
         <div className="hidden shrink-0 items-center gap-3 md:flex lg:hidden xl:flex">
-          <a
+          {/* <a
             href={site.cvUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -121,8 +121,8 @@ export function Header() {
           >
             <FileText className="h-4 w-4 text-terracotta" />
             <span>Curriculum Vitae</span>
-          </a>
-          <a
+          </a> */}
+          {/* <a
             href={site.phoneHref}
             target="_blank"
             rel="noopener noreferrer"
@@ -130,7 +130,7 @@ export function Header() {
           >
             <MessageCircle className="h-4 w-4" />
             <span>Hubungi Saya</span>
-          </a>
+          </a> */}
         </div>
 
         <button
@@ -167,7 +167,7 @@ export function Header() {
                   {item.label}
                 </a>
               ))}
-              <div className="space-y-2 border-t border-stone-100 pt-3">
+              {/* <div className="space-y-2 border-t border-stone-100 pt-3">
                 <a
                   href={site.cvUrl}
                   target="_blank"
@@ -186,7 +186,7 @@ export function Header() {
                 >
                   Hubungi via WhatsApp
                 </a>
-              </div>
+              </div> */}
             </nav>
           </motion.div>
         ) : null}
