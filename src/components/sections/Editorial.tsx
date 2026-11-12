@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { AlertCircle, CheckCircle2, Maximize2, X } from "lucide-react";
+import { AlertCircle, CheckCircle2, Maximize2, X, ZoomIn, ZoomOut } from "lucide-react";
 import {
   Dialog,
   DialogClose,
@@ -20,6 +20,17 @@ type MobileView = "draf" | "suntingan";
 export function Editorial() {
   const [mobileView, setMobileView] = useState<MobileView>("suntingan");
   const [active, setActive] = useState<EditorialPreview | null>(null);
+  const [zoomed, setZoomed] = useState(false);
+
+  const openPreview = (preview: EditorialPreview) => {
+    setZoomed(false);
+    setActive(preview);
+  };
+
+  const closePreview = () => {
+    setZoomed(false);
+    setActive(null);
+  };
 
   return (
     <section
@@ -121,7 +132,7 @@ export function Editorial() {
 
                     <button
                       type="button"
-                      onClick={() => setActive(preview)}
+                      onClick={() => openPreview(preview)}
                       aria-haspopup="dialog"
                       aria-label={`Perbesar preview ${preview.title.toLowerCase()}`}
                       className={cn(
@@ -165,7 +176,7 @@ export function Editorial() {
       </div>
 
       {active ? (
-        <Dialog open onOpenChange={(open) => (!open ? setActive(null) : undefined)}>
+        <Dialog open onOpenChange={(open) => (!open ? closePreview() : undefined)}>
           <DialogContent
             showCloseButton={false}
             className="max-h-[92vh] max-w-4xl border-stone-700 bg-stone-900 p-0 text-stone-100"
@@ -192,14 +203,55 @@ export function Editorial() {
               </DialogClose>
             </div>
 
-            <div className="relative h-[64vh] w-full bg-stone-950 p-3 sm:h-[68vh] sm:p-5">
-              <Image
-                src={active.image}
-                alt={active.alt}
-                fill
-                sizes="90vw"
-                className="object-contain"
-              />
+            <div className="relative bg-stone-950">
+              <div
+                className={cn(
+                  "h-[60vh] w-full sm:h-[64vh]",
+                  zoomed ? "cursor-zoom-out overflow-auto" : "overflow-hidden",
+                )}
+              >
+                <div
+                  className={cn(
+                    "flex w-full",
+                    zoomed
+                      ? "min-h-full items-start justify-start"
+                      : "h-full items-center justify-center p-3 sm:p-5",
+                  )}
+                >
+                  <Image
+                    src={active.image}
+                    alt={active.alt}
+                    width={1298}
+                    height={1771}
+                    quality={95}
+                    loading="eager"
+                    onClick={() => setZoomed((value) => !value)}
+                    className={cn(
+                      "object-contain",
+                      zoomed
+                        ? "h-auto w-[220%] max-w-none shrink-0 cursor-zoom-out sm:w-[170%]"
+                        : "h-full w-auto max-w-full cursor-zoom-in",
+                    )}
+                  />
+                </div>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setZoomed((value) => !value)}
+                aria-pressed={zoomed}
+                aria-label={zoomed ? "Perkecil gambar naskah" : "Perbesar gambar naskah"}
+                className="absolute right-3 top-3 z-20 inline-flex items-center gap-1.5 rounded-lg border border-white/20 bg-stone-950/80 px-3 py-2 text-xs font-semibold text-white shadow-lg backdrop-blur-sm transition-colors hover:bg-terracotta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
+              >
+                {zoomed ? <ZoomOut className="h-4 w-4" /> : <ZoomIn className="h-4 w-4" />}
+                <span>{zoomed ? "Perkecil" : "Perbesar"}</span>
+              </button>
+
+              {!zoomed ? (
+                <span className="pointer-events-none absolute bottom-3 left-3 z-20 rounded-full border border-white/20 bg-stone-950/75 px-3 py-1 text-[10px] font-medium text-stone-200 backdrop-blur-sm">
+                  Klik gambar untuk memperbesar
+                </span>
+              ) : null}
             </div>
           </DialogContent>
         </Dialog>
